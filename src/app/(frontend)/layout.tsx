@@ -3,13 +3,13 @@ import '@/styles/global.css'
 import { Inter, Sora } from 'next/font/google'
 import { Metadata } from 'next'
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
 })
 
-export const sora = Sora({
+const sora = Sora({
   subsets: ['latin'],
   variable: '--font-sora',
   weight: ['400', '600', '700'], // ajusta según tu estilo
