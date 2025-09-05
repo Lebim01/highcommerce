@@ -232,10 +232,7 @@ export default function LandingEcommerce() {
       <header className="sticky top-0 z-50 backdrop-blur bg-white/70 ring-1 ring-slate-900/10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <a href="#hero" className="flex items-center gap-2">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-sky-600 text-white font-bold shadow">
-              E
-            </span>
-            <span className="text-sm font-semibold tracking-tight">E‑commerce Masivo</span>
+            <img src="/word-light.png" className="h-16" />
           </a>
           <nav className="hidden gap-6 md:flex">
             {NAV.map((item) => (
@@ -320,7 +317,7 @@ export default function LandingEcommerce() {
             transition={{ duration: 0.5 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
               Vende más, aunque tengas miles de productos
             </h1>
             <p className="mt-4 text-base sm:text-lg text-slate-700">
@@ -358,41 +355,47 @@ export default function LandingEcommerce() {
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
               Los dolores que resolvemos
             </h2>
-            <ul className="mt-6 space-y-4">
+            <div className="mt-6 space-y-4">
               {dolores.map((d) => (
-                <li
+                <div
                   key={d.title}
-                  className="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-900/10"
+                  className="flex flex-col gap-2 rounded-2xl bg-sky-50/60 p-4 shadow-sm ring-1 ring-sky-200"
                 >
-                  <span className="mt-1 text-sky-600">
-                    <Check />
-                  </span>
-                  <div>
-                    <p className="font-semibold">{d.title}</p>
-                    <p className="text-slate-700 text-sm">{d.desc}</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sky-700">
+                      <Check />
+                    </span>
+                    <span className="font-semibold">{d.title}</span>
                   </div>
-                </li>
+
+                  <div>
+                    <span className="text-slate-700 text-sm">{d.desc}</span>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">Cómo te ayudamos</h3>
-            <ul className="mt-6 grid gap-4">
+            <div className="mt-6 grid gap-4">
               {soluciones.map((s) => (
-                <li
+                <div
                   key={s.title}
-                  className="flex gap-3 rounded-2xl bg-sky-50/60 p-4 shadow-sm ring-1 ring-sky-200"
+                  className="flex flex-col gap-2 rounded-2xl bg-sky-50/60 p-4 shadow-sm ring-1 ring-sky-200"
                 >
-                  <span className="mt-1 text-sky-700">
-                    <Check />
-                  </span>
-                  <div>
-                    <p className="font-semibold">{s.title}</p>
-                    <p className="text-slate-700 text-sm">{s.desc}</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sky-700">
+                      <Check />
+                    </span>
+                    <span className="font-semibold">{s.title}</span>
                   </div>
-                </li>
+
+                  <div>
+                    <span className="text-slate-700 text-sm">{s.desc}</span>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>

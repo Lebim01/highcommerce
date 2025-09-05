@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+:root {
+  --hc-ink: #0b1220;
+  --hc-blue: #2f81f7;
+  --hc-mint: #16dbcc;
+  --hc-lime: #b7f36b;
+  --hc-slate: #4b5563;
+  --hc-sand: #f6f5f2;
+  --hc-text: var(--hc-ink);
+  --hc-bg: var(--hc-sand);
+}
+:root[data-theme='dark'] {
+  --hc-text: #ffffff;
+  --hc-bg: #0b1220;
+}
+
+* {
+  @apply font-sans;
+}
